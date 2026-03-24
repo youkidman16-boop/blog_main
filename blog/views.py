@@ -6,7 +6,7 @@ from .models import Post, Category
 
 # Create your views here.
 def home(request):
-    posts = Post.objects.filter(status=Post.ACTIVE).order_by('-created_at')
+    posts = Post.objects.filter(Status=Post.ACTIVE).order_by('-created_at')
     context = {
         'posts': posts
     }
