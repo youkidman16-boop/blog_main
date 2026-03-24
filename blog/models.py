@@ -2,10 +2,10 @@ from django.db import models
 
 # Create your models here.
 class Category(models.Model):
-    title = models.CharField(max_lenght = 225)
+    title = models.CharField(max_length = 225)
     
     class Meta:
-        ordering = ('title')
+        ordering = ('title',)
         verbose_name_plural = 'Categories'
 
     def __str__(self):
@@ -26,7 +26,7 @@ class Post (models.Model):
     intro = models.TextField()
     body = models.TextField()
     created_at = models.DateTimeField(auto_now_add= True)
-    Status = models.CharField(max_length=10, choices= CHOICES_STATUS, default=ACTIVE)
+    status = models.CharField(max_length=10, choices= CHOICES_STATUS, default=ACTIVE)
     image = models.ImageField(upload_to='upload/',blank=True, null=True)
 
     def __str__(self):
