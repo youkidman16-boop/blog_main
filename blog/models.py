@@ -2,10 +2,10 @@ from django.db import models
 
 # Create your models here.
 class Category(models.Model):
-    title = models.CharField(max_lenght = 225)
+    title = models.CharField(max_length = 225)
     
     class Meta:
-        ordering = ('title')
+        ordering = ('title',)
         verbose_name_plural = 'Categories'
 
     def __str__(self):
