@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*- codigo:
 
 from.models import Post,Category,Comment
 from django.contrib import admin
