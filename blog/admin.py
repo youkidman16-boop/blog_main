@@ -2,7 +2,6 @@
 
 from.models import Post,Category,Comment
 from django.contrib import admin
-from.models import Post,Category,Comment
 
 class CommentItemInline(admin.TabularInline):
     model=Comment
@@ -10,8 +9,8 @@ class CommentItemInline(admin.TabularInline):
 
 class PostAdmin(admin.ModelAdmin):
         search_fields= ['title','intro','body']
-        list_display=('title','category','created_at','Status')
-        list_filter= ['category','created_at','Status']
+        list_display=('title','category','created_at','status')
+        list_filter= ['category','created_at','status']
         inlines= [CommentItemInline]
 
 class CategoryAdmin(admin.ModelAdmin):
